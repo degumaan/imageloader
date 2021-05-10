@@ -13,5 +13,12 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card *ngFor="let card of userCard" href="#">
+    <ion-card-content [routerLink]="['/tab2']">
+      <ion-card-subtitle>ID: {{card.id}}</ion-card-subtitle>
+      <ion-card-subtitle>Name: {{card.name}}</ion-card-subtitle>
+      <ion-card-subtitle>Email: {{card.email}}</ion-card-subtitle>
+      <ion-card-subtitle>Phone: {{card.phone}}</ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
